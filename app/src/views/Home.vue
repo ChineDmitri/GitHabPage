@@ -337,7 +337,7 @@ body {
 .starwars .titles {
   @media screen and (max-width: 425px) {
     font-size: 1.3rem;
-    bottom: -50px;
+    bottom: -25px;
   }
   width: 14.65em;
   color: #ffff66;
