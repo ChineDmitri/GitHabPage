@@ -343,7 +343,7 @@ body {
   color: #ffff66;
   margin: 0 0 0 -7.325em;
   top: auto;
-  bottom: 0;
+  bottom: -50px;
   height: 50em;
   font-size: 350%;
   text-align: justify;
