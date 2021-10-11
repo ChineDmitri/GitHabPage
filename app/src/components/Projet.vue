@@ -5,9 +5,11 @@ export default {
     title: String,
     description: String,
     imagePreview: String,
-    stacksImg: Array,
-    bio: Boolean,
-    idx: Number
+    altImg: String,
+    gitHub: [String, null],
+    site: [String, null],
+    stacks: Array,
+    bio: Boolean
   }
 };
 </script>
@@ -17,7 +19,7 @@ export default {
     <div class="preview">
       <div class="photoProjet">
         <!-- <img src="../assets/icon-above-font.png" alt="" /> -->
-        <img :src="imagePreview" alt="" />
+        <img :src="imagePreview" :alt="altImg" />
       </div>
       <div class="stack">
         <!-- <img src="../assets/1200px-MySQL.svg.png" alt="" />
@@ -25,10 +27,10 @@ export default {
         <img src="../assets/expressjslogo.png" alt="" />
         <img src="../assets/Noda.png" alt="" /> -->
         <img
-          v-for="stackImg of stacksImg"
-          :key="stackImg"
-          :src="stackImg"
-          alt=""
+          v-for="(stack, idx) of stacks"
+          :key="idx"
+          :src="stack.img"
+          :alt="stack.altImg"
         />
       </div>
     </div>
@@ -36,8 +38,14 @@ export default {
       <h2>{{ title }}</h2>
       <p>
         {{ description }}
-        <a href="#">Voir le projet</a>
       </p>
+      <a v-if="gitHub !== null" :href="gitHub" target="_blank"
+        >Voir le repository GitHub</a
+      >
+      <br v-if="site !== null" />
+      <a v-if="site !== null" :href="site" target="_blank"
+        >Voir le projet déployé</a
+      >
     </div>
   </article>
 </template>
@@ -48,7 +56,7 @@ export default {
   transition-duration: 4000ms;
 }
 .projet {
-  @media screen and (max-width: 425px) {
+  @media screen and (max-width: 768px) {
     flex-direction: column;
   }
   box-shadow: 0px 0px 20px #2a333b;
@@ -60,7 +68,7 @@ export default {
   margin: 20px 0;
   transition-duration: 1500ms;
   .preview {
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: 768px) {
       margin: 0 auto;
       width: 100%;
     }
@@ -68,12 +76,12 @@ export default {
     flex-direction: column;
     width: 185px;
     .photoProjet {
-      @media screen and (max-width: 425px) {
+      @media screen and (max-width: 768px) {
         width: 100%;
         height: 150px;
       }
       border-radius: 25px;
-    //   box-shadow: 0px 0px 20px #252575;
+      //   box-shadow: 0px 0px 20px #252575;
       width: 195px;
       height: 100px;
       margin-right: 10px;
@@ -82,6 +90,12 @@ export default {
         height: 100%;
         object-fit: cover;
         border-radius: 20px;
+        transition-duration: 300ms;
+        &:hover {
+          @media screen and (min-width: 769px) {
+            transform: scale(2.5);
+          }
+        }
       }
     }
     .stack {
@@ -100,26 +114,35 @@ export default {
     }
   }
   .description {
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: 768px) {
       width: 100%;
       margin-left: 0px;
     }
     margin-left: 20px;
     width: 580px;
     h2 {
-      padding: 0 5px;
+      @media screen and (max-width: 768px) {
+        font-size: 1.1rem;
+      }
+      padding: 0;
       margin: 0;
+      font-size: 1.4rem;
+      font-weight: 800;
     }
     p {
       padding: 0 5px;
+      text-align: justify;
       color: #ffff66;
-      font-size: 0.8rem;
+      font-size: 0.9rem;
       font-weight: 400;
-      a {
-        color: blanchedalmond;
-        &:hover {
-          color: #252575;
-        }
+    }
+    a {
+      // margin: 0 auto;
+      text-decoration: none;
+      font-size: 0.9rem;
+      color: blanchedalmond;
+      &:hover {
+        color: #252575;
       }
     }
   }

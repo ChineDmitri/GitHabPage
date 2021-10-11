@@ -14,47 +14,78 @@ export default {
       audio: undefined,
       projets: [
         {
-          title: "Title 1",
-          description:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, fuga provident velit, reiciendis modi asperiores eos nobis numquam quis enim expedita maxime a culpa necessitatibus sequi odit voluptatum dolorem non.",
-          imagePreview: "/img/img.jpg",
-          stacksImg: [
-            "/img/1200px-MySQL.svg.png",
-            "/img/1200px-Vue.js_Logo_2.svg.png",
-            "/img/expressjslogo.png",
-            "/img/Noda.png"
-          ]
-        },
-        {
-          title: "Title 1",
-          description:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, fuga provident velit, reiciendis modi asperiores eos nobis numquam quis enim expedita maxime a culpa necessitatibus sequi odit voluptatum dolorem non.",
-          imagePreview: "/img/img.jpg",
-          stacksImg: [
-            "/img/1200px-MySQL.svg.png",
-            "/img/1200px-Vue.js_Logo_2.svg.png",
-            "/img/expressjslogo.png",
-            "/img/Noda.png"
-          ]
-        },
-        {
-          title: "Title 1",
-          description:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, fuga provident velit, reiciendis modi asperiores eos nobis numquam quis enim expedita maxime a culpa necessitatibus sequi odit voluptatum dolorem non.",
-          imagePreview: "/img/img.jpg",
-          stacksImg: [
-            "/img/1200px-MySQL.svg.png",
-            "/img/1200px-Vue.js_Logo_2.svg.png",
-            "/img/expressjslogo.png",
-            "/img/Noda.png"
-          ]
-        },
-        {
-          title: "Title 2",
+          title: "Saisie semi-automatique pour attestation d'employeur",
           description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, fuga provident velit, reiciendis modi asperiores eos nobis numquam quis enim expedita maxime a culpa necessitatibus sequi odit voluptatum dolorem non.",
           imagePreview: "/img/ae.jpg",
-          stacksImg: ["/img/selenium.png", "/img/Noda.png"]
+          altImg: "Attestation d'employer - Pôle emploi",
+          gitHub: "https://github.com/ChineDmitri/Selenium_LE-GADIPLE-SEC_AE",
+          site: null,
+          stacks: [
+            {
+              img: "/img/selenium.png",
+              altImg: "Selenium"
+            },
+            {
+              img: "/img/Noda.png",
+              altImg: "Node.Js"
+            },
+            {
+              img: "/img/Excel.png",
+              altImg: "Excel"
+            }
+          ]
+        },
+        {
+          title: "Réseau social d’entreprise",
+          description:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, fuga provident velit, reiciendis modi asperiores eos nobis numquam quis enim expedita maxime a culpa necessitatibus sequi odit voluptatum dolorem non.",
+          imagePreview: "/img/groupomania.png",
+          altImg: "Réseau social pour l’entreprise - Gropomania",
+          gitHub: "https://github.com/ChineDmitri/DmitriChine_7_11072021",
+          site: "https://dcdev-groupomania.herokuapp.com/",
+          stacks: [
+            {
+              img: "/img/1200px-MySQL.svg.png",
+              altImg: "MySQL"
+            },
+            {
+              img: "/img/1200px-Vue.js_Logo_2.svg.png",
+              altImg: "Vue.Js"
+            },
+            {
+              img: "/img/expressjslogo.png",
+              altImg: "Express.Js"
+            },
+            {
+              img: "/img/Noda.png",
+              alaltImgt: "Node.Js"
+            }
+          ]
+        },
+        {
+          title: "API sécurisée pour une application d'avis gastronomiques",
+          description:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, fuga provident velit, reiciendis modi asperiores eos nobis numquam quis enim expedita maxime a culpa necessitatibus sequi odit voluptatum dolorem non.",
+          imagePreview: "/img/p6.png",
+          altImg: "API sécurisée pour une application d'avis gastronomiques - Piiquante",
+          gitHub: "https://github.com/ChineDmitri/DmitriChine_6_30052021",
+          site: null,
+          stacks: [
+            {
+              img: "/img/MongoDB-Logo.png",
+              altImg: "MongoDB"
+            },
+            {
+              img: "/img/expressjslogo.png",
+              altImg: "Express.Js"
+            },
+            {
+              img: "/img/Noda.png",
+              altImg: "Node.Js"
+            },
+
+          ]
         }
       ]
     };
@@ -148,13 +179,15 @@ export default {
     <main data-aos="fade-up" data-aos-duration="1500" data-aos-once="true">
       <Projet
         v-for="(projet, idx) in projets"
-        :key="projet"
+        :key="idx"
         :title="projet.title"
         :imagePreview="projet.imagePreview"
+        :altImg="projet.altImg"
+        :gitHub="projet.gitHub"
+        :site="projet.site"
         :description="projet.description"
-        :stacksImg="projet.stacksImg"
+        :stacks="projet.stacks"
         :bio="bio"
-        :idx="idx"
       ></Projet>
     </main>
 
@@ -198,7 +231,7 @@ export default {
   transition-duration: 1500ms;
 }
 main {
-  @media screen and (max-width: 425px) {
+  @media screen and (max-width: 768px) {
     width: calc(100% - 25px);
     margin: 10px auto;
   }
@@ -210,7 +243,7 @@ main {
   margin: 50px auto;
 }
 #stopBio {
-  @media screen and (max-width: 425px) {
+  @media screen and (max-width: 768) {
     top: -20px;
   }
   opacity: 1;
@@ -322,7 +355,7 @@ body {
   color: #ffff66;
 }
 .starwars .intro {
-  @media screen and (max-width: 425px) {
+  @media screen and (max-width: 768px) {
     font-size: 1rem;
   }
   width: 15em;
@@ -335,15 +368,15 @@ body {
   animation: intro 5s ease-out 3s;
 }
 .starwars .titles {
-  @media screen and (max-width: 425px) {
+  @media screen and (max-width: 768px) {
     font-size: 1.3rem;
-    bottom: -25px;
+    bottom: -40px;
   }
   width: 14.65em;
   color: #ffff66;
   margin: 0 0 0 -7.325em;
   top: auto;
-  bottom: 0;
+  bottom: -50px;
   height: 50em;
   font-size: 350%;
   text-align: justify;
