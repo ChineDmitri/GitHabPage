@@ -165,8 +165,7 @@ Accélérer la vitesse de chargemen et comparaison des résultats.`,
           title: "Dynamisez web site avec des animations CSS",
           description: `Ohmyfood! est une entreprise de commande de repas en ligne. Notre concept permet aux
 utilisateurs de composer leur propre menu et réduire leur temps d’attente dans les
-restaurants car leur menu est préparé à l’avance. Plus de perte de temps à consulter la carte
-!
+restaurants car leur menu est préparé à l’avance. Plus de perte de temps à consulter la carte!
             
 Les effets accessibles au clic ou au survol. Ils utilisent les animations ou transitions CSS, pas de JavaScript ni de librairie.`,
           imagePreview: "/img/ohmyfood.png",
@@ -319,7 +318,7 @@ Les effets accessibles au clic ou au survol. Ils utilisent les animations ou tra
         <section class="titles">
           <div contenteditable="true" spellcheck="false">
             <p>
-              Monsieur Chine Dmitri, web-developpeur, né en 11 décembre 1992 à Kazakhstan. En 2009, j'ai déménagé en Russie et commencé étude à l'Université d'Instrumentation Aérospatiale de Saint-Pétersbourg. Cette éducation n'était pas terminée et en 2011, j'avais obligation servir 1 an d'armée obligatoire en Russie pendant 2012-2013. En suite de l'armée russe, j'ai décidé partir en France et en engagé à la Légion Étrangère. 
+              Monsieur Chine Dmitri, web-developpeur, né en 11 décembre 1992 à Kazakhstan. En 2009, j'ai déménagé en Russie et commencé étude à l'Université d'Instrumentation Aérospatiale de Saint-Pétersbourg. Cette éducation n'était pas terminée et en 2011, j'avais obligation servir 1 an d'armée obligatoire en Russie pendant 2012-2013. En suite de l'armée russe, j'ai décidé partir en France et s'engager à la Légion Étrangère. 
             </p>
 
             <p>
