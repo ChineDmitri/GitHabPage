@@ -319,13 +319,7 @@ Les effets accessibles au clic ou au survol. Ils utilisent les animations ou tra
         <section class="titles">
           <div contenteditable="true" spellcheck="false">
             <p>
-              Monsieur Chine Dmitri, web-developpeur, né en 11 décembre 1992 a
-              Kazakhstan. En 2009 déménagées à Russie et commencées étude à
-              l'université d'instrumentation aérospatiale de Saint-Pétersbourg.
-              Cette éducation n'était pas terminée et en 2011, j'avais
-              obligation servir 1 an d'armée obligatoire en Russie 2012-2013. En
-              suite de l'armée russe, j'ai décidé partir en France et en engagé
-              à la Légion Étrangère.
+              Monsieur Chine Dmitri, web-developpeur, né en 11 décembre 1992 à Kazakhstan. En 2009, j'ai déménagé en Russie et commencé étude à l'Université d'Instrumentation Aérospatiale de Saint-Pétersbourg. Cette éducation n'était pas terminée et en 2011, j'avais obligation servir 1 an d'armée obligatoire en Russie pendant 2012-2013. En suite de l'armée russe, j'ai décidé partir en France et en engagé à la Légion Étrangère. 
             </p>
 
             <p>
