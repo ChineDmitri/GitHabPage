@@ -130,6 +130,7 @@ export default {
       font-weight: 800;
     }
     p {
+      white-space: pre-wrap;
       padding: 0 5px;
       text-align: justify;
       color: #ffff66;
