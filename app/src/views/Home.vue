@@ -277,7 +277,7 @@ Les effets accessibles au clic ou au survol. Ils utilisent les animations ou tra
       </div>
 
       <div class="social">
-        <a href="/CHINE_Dmitri-2021.pdf" title="CV" target="_blank">
+        <a href="/CHINE_Dmitri-2022.pdf" title="CV" target="_blank">
           <i class="fas fa-id-card" @click="startBio"></i>
         </a>
         <a href="https://www.linkedin.com/in/dmitri-chine" title="Profil LinkedIn" target="_blank">
@@ -286,7 +286,7 @@ Les effets accessibles au clic ou au survol. Ils utilisent les animations ou tra
         <a href="https://github.com/ChineDmitri" title="GitHub" target="_blank">
           <i class="fab fa-github"></i>
         </a>
-        <a href="https://wa.me/33637753064" title="WhatsApp" target="_blank">
+        <a href="https://wa.me/33642447824" title="WhatsApp" target="_blank">
           <i class="fab fa-whatsapp-square"></i>
         </a>
       </div>
